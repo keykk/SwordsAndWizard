@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw227owdj452p"
+path="res://.godot/imported/tumazuku kanzi1.mp3-c88ff17d9c2793a9400983e94ee5c742.mp3str"
+
+[deps]
+
+source_file="res://addons/Sounds/otologic/tumazuku kanzi-mp3/tumazuku kanzi1.mp3"
+dest_files=["res://.godot/imported/tumazuku kanzi1.mp3-c88ff17d9c2793a9400983e94ee5c742.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8u3tb2dmfmii"]
+[gd_scene load_steps=12 format=3 uid="uid://c8u3tb2dmfmii"]
 
 [ext_resource type="Script" path="res://misc/ritu.gd" id="1_4avg0"]
 [ext_resource type="Texture2D" uid="uid://bkmbf12mgj5pn" path="res://addons/kenney_particle-pack/circle_03.png" id="1_klujg"]
 [ext_resource type="Texture2D" uid="uid://dnjtr6icentcb" path="res://addons/kenney_particle-pack/light_02.png" id="2_ra863"]
 [ext_resource type="Texture2D" uid="uid://do4se0f6qmcr3" path="res://addons/kenney_particle-pack/magic_02.png" id="3_kgb06"]
+[ext_resource type="AudioStream" uid="uid://dx4dgnodqwdvp" path="res://addons/Sounds/ElevenLabs/ElevenLabs_FELIPAO.mp3" id="5_iskht"]
+[ext_resource type="AudioStream" uid="uid://bw227owdj452p" path="res://addons/Sounds/otologic/tumazuku kanzi-mp3/tumazuku kanzi1.mp3" id="6_hbnwo"]
 
 [sub_resource type="Animation" id="Animation_6ker5"]
 length = 0.001
@@ -66,6 +68,30 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.7, 0.658)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_5jf5s"]
@@ -192,6 +218,30 @@ tracks/6/keys = {
 "method": &"queue_free"
 }]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c5hq5"]
 _data = {
@@ -213,7 +263,7 @@ libraries = {
 "": SubResource("AnimationLibrary_c5hq5")
 }
 autoplay = "default"
-speed_scale = 1.5
+speed_scale = 1.3
 
 [node name="Images" type="Node2D" parent="."]
 modulate = Color(0.505882, 0.341176, 1, 1)
@@ -232,6 +282,14 @@ texture = ExtResource("2_ra863")
 material = SubResource("CanvasItemMaterial_5rn05")
 scale = Vector2(1.27692, 1.26084)
 texture = ExtResource("3_kgb06")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 1)
+stream = ExtResource("5_iskht")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 1)
+stream = ExtResource("6_hbnwo")
 
 [node name="Area2D" type="Area2D" parent="."]
 

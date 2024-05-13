@@ -162,7 +162,7 @@ func attack() -> void:
 			skill2.position = position	
 			get_parent().add_child(skill2)
 			is_skill2 = true
-			skill2_cooldown = 2.5
+			skill2_cooldown = 8
 	elif Input.is_action_just_pressed("attack_special"):
 		pass
 		
