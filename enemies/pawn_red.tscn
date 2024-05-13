@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://dayf74nrvn4ep"]
+
+[ext_resource type="PackedScene" uid="uid://dv8fahnrx18mc" path="res://characters/PawnRed.tscn" id="1_cqg0r"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="2_n6w5k"]
+[ext_resource type="PackedScene" uid="uid://bp07b8i55d58b" path="res://misc/skull.tscn" id="3_ngwb2"]
+[ext_resource type="PackedScene" uid="uid://32nqh7gqmijx" path="res://misc/explosao.tscn" id="3_rbdcf"]
+[ext_resource type="Script" path="res://enemies/behaviors/fallow_player.gd" id="3_sbdvo"]
+
+[node name="PawnRed" groups=["enemies"] instance=ExtResource("1_cqg0r")]
+script = ExtResource("2_n6w5k")
+explosion = ExtResource("3_rbdcf")
+max_health = 150
+health = 150
+death_prefab = ExtResource("3_ngwb2")
+
+[node name="FollowPlayer" type="Node" parent="." index="4"]
+script = ExtResource("3_sbdvo")
+
+[node name="HealthProgressBar" parent="." index="5"]
+unique_name_in_owner = true

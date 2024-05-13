@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://coekkjp5y1vyj"]
+
+[ext_resource type="PackedScene" uid="uid://b7kjj8hi4fcqo" path="res://characters/WarriorBlue.tscn" id="1_g0018"]
+[ext_resource type="Script" path="res://enemies/behaviors/fallow_player.gd" id="2_cprsp"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="2_twjah"]
+[ext_resource type="PackedScene" uid="uid://32nqh7gqmijx" path="res://misc/explosao.tscn" id="3_4i010"]
+[ext_resource type="PackedScene" uid="uid://bp07b8i55d58b" path="res://misc/skull.tscn" id="4_qb0fx"]
+
+[node name="WarriorBlue" groups=["enemies"] instance=ExtResource("1_g0018")]
+script = ExtResource("2_twjah")
+explosion = ExtResource("3_4i010")
+max_health = 150
+health = 150
+death_prefab = ExtResource("4_qb0fx")
+sword_damage = 20
+
+[node name="Node" type="Node" parent="." index="4"]
+script = ExtResource("2_cprsp")
+
+[node name="HealthProgressBar" parent="." index="5"]
+unique_name_in_owner = true

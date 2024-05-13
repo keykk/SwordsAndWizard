@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfubpim7u1a4i"]
+
+[ext_resource type="PackedScene" uid="uid://7gqeb56h28uk" path="res://player/wizard.tscn" id="1_mvt3o"]
+[ext_resource type="PackedScene" uid="uid://do6cfw6mhbkq0" path="res://system/mob_spaw.tscn" id="2_msq6y"]
+
+[node name="TestMobSpaw" type="Node2D"]
+
+[node name="MobSpaw" parent="." instance=ExtResource("2_msq6y")]
+
+[node name="Wizard" parent="." instance=ExtResource("1_mvt3o")]
+position = Vector2(234, 145)

@@ -1,0 +1,452 @@
+[gd_scene load_steps=26 format=3 uid="uid://6uk2ksdm7xm"]
+
+[ext_resource type="Script" path="res://misc/skill_choque.gd" id="1_evrl5"]
+[ext_resource type="Texture2D" uid="uid://duj3tg5u63ilh" path="res://addons/kenney_particle-pack/spark_07.png" id="1_f5cik"]
+[ext_resource type="Texture2D" uid="uid://by7o302yarqvx" path="res://addons/kenney_particle-pack/spark_05.png" id="2_eg7fj"]
+[ext_resource type="Texture2D" uid="uid://dpnb5oo5oxc5p" path="res://addons/kenney_particle-pack/spark_06.png" id="3_kuoe6"]
+[ext_resource type="Texture2D" uid="uid://ctewdcfepy37y" path="res://addons/kenney_particle-pack/spark_02.png" id="4_rr2ff"]
+[ext_resource type="Texture2D" uid="uid://vwfj42akynsj" path="res://addons/kenney_particle-pack/spark_01.png" id="5_wutdh"]
+[ext_resource type="Texture2D" uid="uid://bbj021l5oyhro" path="res://addons/kenney_particle-pack/spark_03.png" id="6_bsndu"]
+[ext_resource type="Texture2D" uid="uid://dimtdij42pc26" path="res://addons/kenney_particle-pack/flare_01.png" id="7_it80e"]
+[ext_resource type="Texture2D" uid="uid://02hvx6hf7wpa" path="res://addons/kenney_particle-pack/smoke_08.png" id="8_til7m"]
+[ext_resource type="Texture2D" uid="uid://1x08ccfadoaf" path="res://addons/kenney_particle-pack/smoke_07.png" id="9_5mb0a"]
+[ext_resource type="Texture2D" uid="uid://b5klexv0tjev3" path="res://addons/kenney_particle-pack/smoke_05.png" id="10_ljef5"]
+[ext_resource type="Texture2D" uid="uid://d03cedfncau2c" path="res://addons/kenney_particle-pack/smoke_02.png" id="11_lnatg"]
+[ext_resource type="Texture2D" uid="uid://pvapnw0ghliu" path="res://addons/kenney_particle-pack/smoke_01.png" id="12_2ba5x"]
+
+[sub_resource type="Animation" id="Animation_tbggk"]
+resource_name = "default"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Spark07:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(7.99999, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Spark05:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(3.86375, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.00784314), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Spark06:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(5.85635, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.992157)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Spark02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(5.85635, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Spark01:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(7.72751, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Spark03:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(4.43828, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.972549)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Flare01:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/Smoke08:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(34.2967, 16),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/Smoke07:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(19.6983, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/Smoke05:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(13.9288, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.996078)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/Smoke02:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(15.455, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/Smoke01:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(18.3792, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.1, 3.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_erjji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Spark07:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Spark05:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.00784314)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Spark06:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Spark02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Spark01:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Spark03:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Flare01:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/Smoke08:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/Smoke07:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/Smoke05:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/Smoke02:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/Smoke01:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h70ch"]
+_data = {
+"RESET": SubResource("Animation_erjji"),
+"default": SubResource("Animation_tbggk")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ac71k"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d3w8c"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y2453"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nn45o"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5e2yq"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k14tj"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jdy2h"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pylmj"]
+blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj8io"]
+size = Vector2(732, 201)
+
+[node name="SkillChoque" type="Node2D"]
+script = ExtResource("1_evrl5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h70ch")
+}
+autoplay = "default"
+speed_scale = 2.0
+
+[node name="Node2D" type="Node2D" parent="."]
+modulate = Color(0.505882, 0.341176, 1, 1)
+
+[node name="Spark07" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_ac71k")
+position = Vector2(346, -101)
+texture = ExtResource("1_f5cik")
+
+[node name="Spark05" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0.00784314)
+material = SubResource("CanvasItemMaterial_d3w8c")
+position = Vector2(347, -85)
+rotation = 1.5708
+texture = ExtResource("2_eg7fj")
+
+[node name="Spark06" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_y2453")
+position = Vector2(348, -61)
+rotation = 1.5708
+texture = ExtResource("3_kuoe6")
+
+[node name="Spark02" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_nn45o")
+position = Vector2(153, -76.0001)
+scale = Vector2(0.597656, 0.570313)
+texture = ExtResource("4_rr2ff")
+
+[node name="Spark01" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_5e2yq")
+position = Vector2(560, -148)
+texture = ExtResource("5_wutdh")
+
+[node name="Spark03" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_k14tj")
+position = Vector2(712, -150)
+texture = ExtResource("6_bsndu")
+
+[node name="Flare01" type="Sprite2D" parent="Node2D"]
+material = SubResource("CanvasItemMaterial_jdy2h")
+position = Vector2(74, -87)
+texture = ExtResource("7_it80e")
+
+[node name="Smoke08" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_pylmj")
+position = Vector2(668, -104)
+texture = ExtResource("8_til7m")
+
+[node name="Smoke07" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(395, -135)
+texture = ExtResource("9_5mb0a")
+
+[node name="Smoke05" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(251, -81)
+texture = ExtResource("10_ljef5")
+
+[node name="Smoke02" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(356, -37)
+texture = ExtResource("11_lnatg")
+
+[node name="Smoke01" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(531, -13)
+texture = ExtResource("12_2ba5x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(409, -76.5)
+shape = SubResource("RectangleShape2D_mj8io")

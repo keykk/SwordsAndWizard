@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh2nj4tfv48yi"]
+
+[ext_resource type="PackedScene" uid="uid://ctvloyl0xskon" path="res://characters/TouchBlue.tscn" id="1_yxn3w"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="2_d845b"]
+[ext_resource type="PackedScene" uid="uid://32nqh7gqmijx" path="res://misc/explosao.tscn" id="3_2a04y"]
+[ext_resource type="PackedScene" uid="uid://bp07b8i55d58b" path="res://misc/skull.tscn" id="3_u7u0g"]
+[ext_resource type="Script" path="res://enemies/behaviors/fallow_player.gd" id="3_we1l6"]
+
+[node name="TouchBlue" groups=["enemies"] instance=ExtResource("1_yxn3w")]
+script = ExtResource("2_d845b")
+explosion = ExtResource("3_2a04y")
+max_health = 150
+health = 150
+death_prefab = ExtResource("3_u7u0g")
+
+[node name="Follow_player" type="Node" parent="." index="4"]
+script = ExtResource("3_we1l6")
+speed = 0.8
+
+[node name="HealthProgressBar" parent="." index="5"]
+unique_name_in_owner = true
