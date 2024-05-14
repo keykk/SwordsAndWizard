@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dnjtr6icentcb" path="res://addons/kenney_particle-pack/light_02.png" id="2_ra863"]
 [ext_resource type="Texture2D" uid="uid://do4se0f6qmcr3" path="res://addons/kenney_particle-pack/magic_02.png" id="3_kgb06"]
 [ext_resource type="AudioStream" uid="uid://dx4dgnodqwdvp" path="res://addons/Sounds/ElevenLabs/ElevenLabs_FELIPAO.mp3" id="5_iskht"]
-[ext_resource type="AudioStream" uid="uid://bw227owdj452p" path="res://addons/Sounds/otologic/tumazuku kanzi-mp3/tumazuku kanzi1.mp3" id="6_hbnwo"]
+[ext_resource type="AudioStream" uid="uid://d3t8ip4lup35j" path="res://addons/Sounds/freesound/734831__quantumfellow__roboscan3.wav" id="6_4ja7b"]
 
 [sub_resource type="Animation" id="Animation_6ker5"]
 length = 0.001
@@ -237,10 +237,10 @@ tracks/8/path = NodePath("AudioStreamPlayer2D2:playing")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(1.9),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c5hq5"]
@@ -259,6 +259,7 @@ scale = Vector2(1.48794, 1.46806)
 script = ExtResource("1_4avg0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_c5hq5")
 }
@@ -284,12 +285,10 @@ scale = Vector2(1.27692, 1.26084)
 texture = ExtResource("3_kgb06")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1, 1)
 stream = ExtResource("5_iskht")
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1, 1)
-stream = ExtResource("6_hbnwo")
+stream = ExtResource("6_4ja7b")
 
 [node name="Area2D" type="Area2D" parent="."]
 

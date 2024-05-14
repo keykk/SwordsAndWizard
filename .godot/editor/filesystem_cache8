@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715627524
+::res://::1715682955
 game_manager.gd::GDScript::-1::1715456311::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3219148218217820107::1714974939::1714974955::1::::<><>::
 ::res://addons/::1715627621
@@ -110,8 +110,9 @@ ElevenLabs_CHOQUE_RELAMPAGO.mp3::AudioStreamMP3::4293567516781150689::1715629034
 ElevenLabs_CIRCULO_MAGICO_ROUBADO.mp3::AudioStreamMP3::5900986352839794342::1715628600::1715628666::1::::<><>::
 ElevenLabs_FELIPAO.mp3::AudioStreamMP3::8833665979952880501::1715628642::1715628666::1::::<><>::
 Pikachu.mp3::AudioStreamMP3::2990858256222795089::1715629975::1715629977::1::::<><>::
-::res://addons/Sounds/freesound/::1715631619
+::res://addons/Sounds/freesound/::1715683746
 696391__newlocknew__thun_whipping-thunder-strikeslightning-and-flashlfe-sweetenerartificial_em.mp3::AudioStreamMP3::7766742794197626199::1715631619::1715631629::1::::<><>::
+734831__quantumfellow__roboscan3.wav::AudioStreamWAV::9165791630560597709::1715683746::1715683749::1::::<><>::
 ::res://addons/Sounds/otologic/::1715630898
 ::res://addons/Sounds/otologic/Hit09/::1715630235
 Hit09-1.mp3::AudioStreamMP3::4248387020446079959::1526381434::1715630235::1::::<><>::
@@ -407,46 +408,46 @@ Idle.png::CompressedTexture2D::5949328390147343161::1579482080::1715397133::1:::
 Jump.png::CompressedTexture2D::3198686749529441339::1579482109::1715397133::1::::<><>::
 Run.png::CompressedTexture2D::4824314695260646550::1579482094::1715397133::1::::<><>::
 ::res://behaviors/::1715140309
-::res://characters/::1715631176
-PawnRed.tscn::PackedScene::8701656206875894974::1715631176::0::1::::<><>::uid://byib5asvqguhy::::res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png<>res://characters/scripts/player.gd
+::res://characters/::1715683359
+PawnRed.tscn::PackedScene::8701656206875894974::1715683359::0::1::::<><>::uid://byib5asvqguhy::::res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png<>res://characters/scripts/player.gd
 test.tscn::PackedScene::827940913361208737::1715427497::0::1::::<><>::uid://cq05tmg3jrwy0::::res://addons/Wizard Pack/Idle.png<>uid://c8kdhoko5my6m::::res://addons/Wizard Pack/Attack1.png<>uid://cay601p5ir5xi::::res://addons/Wizard Pack/Run.png<>uid://db6klxgvyrel::::res://addons/Wizard Pack/Attack2.png<>uid://ghm8ygq5xdou::::res://addons/Wizard Pack/Death.png<>uid://cp2qip717n1ti::::res://addons/Wizard Pack/Fall.png<>uid://4h1lguylosiv::::res://addons/Wizard Pack/Hit.png<>uid://bltp5ympb7ts2::::res://addons/Wizard Pack/Jump.png
 TouchBlue.tscn::PackedScene::6150475496099765233::1715620416::0::1::::<><>::res://characters/scripts/player.gd<>uid://c70w38jlxek4r::::res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png
 WarriorBlue.tscn::PackedScene::4653671727217399534::1715620363::0::1::::<><>::uid://b0xleccu0v2hu::::res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png<>res://characters/scripts/player.gd
-Wizard.tscn::PackedScene::2702979228211876047::1715631176::0::1::::<><>::uid://cq05tmg3jrwy0::::res://addons/Wizard Pack/Idle.png<>uid://c8kdhoko5my6m::::res://addons/Wizard Pack/Attack1.png<>uid://cay601p5ir5xi::::res://addons/Wizard Pack/Run.png<>uid://db6klxgvyrel::::res://addons/Wizard Pack/Attack2.png
+Wizard.tscn::PackedScene::2702979228211876047::1715683359::0::1::::<><>::uid://cq05tmg3jrwy0::::res://addons/Wizard Pack/Idle.png<>uid://c8kdhoko5my6m::::res://addons/Wizard Pack/Attack1.png<>uid://cay601p5ir5xi::::res://addons/Wizard Pack/Run.png<>uid://db6klxgvyrel::::res://addons/Wizard Pack/Attack2.png
 ::res://characters/scripts/::1715155151
 player.gd::GDScript::-1::1715155151::0::1::::<>CharacterBody2D<>::
-::res://enemies/::1715631176
+::res://enemies/::1715683359
 enemy.gd::GDScript::-1::1715613849::0::1::::Enemy<>Node2D<>::
 pawn_red.tscn::PackedScene::7209169391606148259::1715576015::0::1::::<><>::uid://dv8fahnrx18mc::::res://characters/PawnRed.tscn<>res://enemies/enemy.gd<>uid://bp07b8i55d58b::::res://misc/skull.tscn<>uid://32nqh7gqmijx::::res://misc/explosao.tscn<>res://enemies/behaviors/fallow_player.gd
 touch_blue.tscn::PackedScene::2934287734354906836::1715576015::0::1::::<><>::uid://ctvloyl0xskon::::res://characters/TouchBlue.tscn<>res://enemies/enemy.gd<>uid://32nqh7gqmijx::::res://misc/explosao.tscn<>uid://bp07b8i55d58b::::res://misc/skull.tscn<>res://enemies/behaviors/fallow_player.gd
-warrior_blue.tscn::PackedScene::5764368214480007517::1715631176::0::1::::<><>::uid://b7kjj8hi4fcqo::::res://characters/WarriorBlue.tscn<>res://enemies/behaviors/fallow_player.gd<>res://enemies/enemy.gd<>uid://32nqh7gqmijx::::res://misc/explosao.tscn<>uid://bp07b8i55d58b::::res://misc/skull.tscn
+warrior_blue.tscn::PackedScene::5764368214480007517::1715683359::0::1::::<><>::uid://b7kjj8hi4fcqo::::res://characters/WarriorBlue.tscn<>res://enemies/behaviors/fallow_player.gd<>res://enemies/enemy.gd<>uid://32nqh7gqmijx::::res://misc/explosao.tscn<>uid://bp07b8i55d58b::::res://misc/skull.tscn
 ::res://enemies/behaviors/::1715598857
 fallow_player.gd::GDScript::-1::1715598857::0::1::::<>Node<>::
 hit_player.gd::GDScript::-1::1715414306::0::1::::<>CharacterBody2D<>::
-::res://misc/::1715631176
+::res://misc/::1715683359
 damage_digit.gd::GDScript::-1::1715573061::0::1::::<>Node2D<>::
-damage_digit.tscn::PackedScene::6849201554843118226::1715631176::0::1::::<><>::res://misc/damage_digit.gd<>uid://b1r7kwo766bkx::::res://addons/Sounds/otologic/Hit09/Hit09-1.mp3
-explosao.tscn::PackedScene::2021844132224630537::1715631176::0::1::::<><>::uid://dqbg5juj31fpo::::res://addons/Tiny Swords/Effects/Explosion/Explosions.png<>res://misc/explosao_dmg.gd<>uid://bew7u6ej6wsfr::::res://addons/Sounds/otologic/Onoma-Impact04/Onoma-Impact04-3(Low).mp3
+damage_digit.tscn::PackedScene::6849201554843118226::1715683359::0::1::::<><>::res://misc/damage_digit.gd<>uid://b1r7kwo766bkx::::res://addons/Sounds/otologic/Hit09/Hit09-1.mp3
+explosao.tscn::PackedScene::2021844132224630537::1715683359::0::1::::<><>::uid://dqbg5juj31fpo::::res://addons/Tiny Swords/Effects/Explosion/Explosions.png<>res://misc/explosao_dmg.gd<>uid://bew7u6ej6wsfr::::res://addons/Sounds/otologic/Onoma-Impact04/Onoma-Impact04-3(Low).mp3
 explosao_dmg.gd::GDScript::-1::1715620643::0::1::::<>Node2D<>::
 life_regenerator.gd::GDScript::-1::1715607430::0::1::::<>Node2D<>::
 meat.tscn::PackedScene::3056314844293281289::1715608119::0::1::::<><>::uid://c46gb2fdna3x8::::res://addons/Tiny Swords/Resources/Resources/M_Spawn.png<>res://misc/life_regenerator.gd
 ritu.gd::GDScript::-1::1715620134::0::1::::<>Node2D<>::
-ritu.tscn::PackedScene::7132094862789742672::1715631176::0::1::::<><>::res://misc/ritu.gd<>uid://bkmbf12mgj5pn::::res://addons/kenney_particle-pack/circle_03.png<>uid://dnjtr6icentcb::::res://addons/kenney_particle-pack/light_02.png<>uid://do4se0f6qmcr3::::res://addons/kenney_particle-pack/magic_02.png<>uid://dx4dgnodqwdvp::::res://addons/Sounds/ElevenLabs/ElevenLabs_FELIPAO.mp3<>uid://bw227owdj452p::::res://addons/Sounds/otologic/tumazuku kanzi-mp3/tumazuku kanzi1.mp3
+ritu.tscn::PackedScene::7132094862789742672::1715683359::0::1::::<><>::res://misc/ritu.gd<>uid://bkmbf12mgj5pn::::res://addons/kenney_particle-pack/circle_03.png<>uid://dnjtr6icentcb::::res://addons/kenney_particle-pack/light_02.png<>uid://do4se0f6qmcr3::::res://addons/kenney_particle-pack/magic_02.png<>uid://dx4dgnodqwdvp::::res://addons/Sounds/ElevenLabs/ElevenLabs_FELIPAO.mp3<>uid://bw227owdj452p::::res://addons/Sounds/otologic/tumazuku kanzi-mp3/tumazuku kanzi1.mp3
 skill_choque.gd::GDScript::-1::1715616911::0::1::::<>Node2D<>::
-skill_choque.tscn::PackedScene::65229342571085418::1715631176::0::1::::<><>::res://misc/skill_choque.gd<>uid://duj3tg5u63ilh::::res://addons/kenney_particle-pack/spark_07.png<>uid://by7o302yarqvx::::res://addons/kenney_particle-pack/spark_05.png<>uid://dpnb5oo5oxc5p::::res://addons/kenney_particle-pack/spark_06.png<>uid://ctewdcfepy37y::::res://addons/kenney_particle-pack/spark_02.png<>uid://vwfj42akynsj::::res://addons/kenney_particle-pack/spark_01.png<>uid://bbj021l5oyhro::::res://addons/kenney_particle-pack/spark_03.png<>uid://dimtdij42pc26::::res://addons/kenney_particle-pack/flare_01.png<>uid://02hvx6hf7wpa::::res://addons/kenney_particle-pack/smoke_08.png<>uid://1x08ccfadoaf::::res://addons/kenney_particle-pack/smoke_07.png<>uid://b5klexv0tjev3::::res://addons/kenney_particle-pack/smoke_05.png<>uid://d03cedfncau2c::::res://addons/kenney_particle-pack/smoke_02.png<>uid://pvapnw0ghliu::::res://addons/kenney_particle-pack/smoke_01.png<>uid://biu187jpbdrf2::::res://addons/Sounds/ElevenLabs/Pikachu.mp3
+skill_choque.tscn::PackedScene::65229342571085418::1715683359::0::1::::<><>::res://misc/skill_choque.gd<>uid://duj3tg5u63ilh::::res://addons/kenney_particle-pack/spark_07.png<>uid://by7o302yarqvx::::res://addons/kenney_particle-pack/spark_05.png<>uid://dpnb5oo5oxc5p::::res://addons/kenney_particle-pack/spark_06.png<>uid://ctewdcfepy37y::::res://addons/kenney_particle-pack/spark_02.png<>uid://vwfj42akynsj::::res://addons/kenney_particle-pack/spark_01.png<>uid://bbj021l5oyhro::::res://addons/kenney_particle-pack/spark_03.png<>uid://dimtdij42pc26::::res://addons/kenney_particle-pack/flare_01.png<>uid://02hvx6hf7wpa::::res://addons/kenney_particle-pack/smoke_08.png<>uid://1x08ccfadoaf::::res://addons/kenney_particle-pack/smoke_07.png<>uid://b5klexv0tjev3::::res://addons/kenney_particle-pack/smoke_05.png<>uid://d03cedfncau2c::::res://addons/kenney_particle-pack/smoke_02.png<>uid://pvapnw0ghliu::::res://addons/kenney_particle-pack/smoke_01.png<>uid://biu187jpbdrf2::::res://addons/Sounds/ElevenLabs/Pikachu.mp3<>uid://diwjebwrysb2n::::res://addons/Sounds/freesound/696391__newlocknew__thun_whipping-thunder-strikeslightning-and-flashlfe-sweetenerartificial_em.mp3
 skull.tscn::PackedScene::3492809258709809555::1715422743::0::1::::<><>::uid://db8yp1dktvjo4::::res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png
-::res://player/::1715619128
+::res://player/::1715683355
 pawn_red.tscn::PackedScene::41467061569342031::1715608119::0::1::::<><>::uid://dv8fahnrx18mc::::res://characters/PawnRed.tscn<>res://player/player.gd
 player.gd::GDScript::-1::1715608115::0::1::::Player<>CharacterBody2D<>::
-player_wizard.gd::GDScript::-1::1715619128::0::1::::Enemyy<>CharacterBody2D<>::
+player_wizard.gd::GDScript::-1::1715683355::0::1::::Enemyy<>CharacterBody2D<>::
 touch_blue.tscn::PackedScene::3296510194360956387::1715608119::0::1::::<><>::uid://ctvloyl0xskon::::res://characters/TouchBlue.tscn<>res://player/player.gd
 warrior_blue.tscn::PackedScene::1441923597270329020::1715608119::0::1::::<><>::uid://b7kjj8hi4fcqo::::res://characters/WarriorBlue.tscn
 wizard.tscn::PackedScene::2259407978287713118::1715487493::0::1::::<><>::uid://berlw470k4fl4::::res://characters/Wizard.tscn<>res://player/player_wizard.gd<>res://enemies/enemy.gd<>uid://c8u3tb2dmfmii::::res://misc/ritu.tscn<>uid://bp07b8i55d58b::::res://misc/skull.tscn
 ::res://system/::1715598736
 mob_spaw.gd::GDScript::-1::1715598736::0::1::::<>Node2D<>::
 mob_spaw.tscn::PackedScene::8206033139299937945::1715487493::0::1::::<><>::res://system/mob_spaw.gd<>uid://dayf74nrvn4ep::::res://enemies/pawn_red.tscn<>uid://bh2nj4tfv48yi::::res://enemies/touch_blue.tscn<>uid://coekkjp5y1vyj::::res://enemies/warrior_blue.tscn
-::res://test_scenes/::1715631176
+::res://test_scenes/::1715683359
 test_assets.tscn::PackedScene::5474396943723532806::1715064065::0::1::::<><>::res://addons/Tiny Swords/Knights/Troops/Warrior/Blue/Warrior_Blue.png<>res://addons/Tiny Swords/Knights/Troops/Pawn/Blue/Pawn_Blue.png<>uid://c70w38jlxek4r::::res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png
-test_mob_spaw.tscn::PackedScene::2778740401071935730::1715631176::0::1::::<><>::uid://7gqeb56h28uk::::res://player/wizard.tscn<>uid://do6cfw6mhbkq0::::res://system/mob_spaw.tscn
+test_mob_spaw.tscn::PackedScene::2778740401071935730::1715683359::0::1::::<><>::uid://7gqeb56h28uk::::res://player/wizard.tscn<>uid://do6cfw6mhbkq0::::res://system/mob_spaw.tscn
 test_player.tscn::PackedScene::6522784788000726487::1715487493::0::1::::<><>::uid://b0xleccu0v2hu::::res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png<>uid://coekkjp5y1vyj::::res://enemies/warrior_blue.tscn<>uid://byib5asvqguhy::::res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png<>uid://dys0ra6ylwlb1::::res://addons/Tiny Swords/Factions/Goblins/Troops/Barrel/Blue/Barrel_Blue.png<>uid://c70w38jlxek4r::::res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png<>uid://7gqeb56h28uk::::res://player/wizard.tscn<>uid://bh2nj4tfv48yi::::res://enemies/touch_blue.tscn<>uid://cubx3l1cku757::::res://addons/Tiny Swords/Effects/Fire/Fire.png<>uid://bjsrcafcd2ivx::::res://misc/meat.tscn<>uid://dayf74nrvn4ep::::res://enemies/pawn_red.tscn<>uid://crc7o3nr4dqwh::::res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Red/Archer_Red.png<>uid://32nqh7gqmijx::::res://misc/explosao.tscn<>uid://do6cfw6mhbkq0::::res://system/mob_spaw.tscn<>uid://dqbg5juj31fpo::::res://addons/Tiny Swords/Effects/Explosion/Explosions.png
-test_ui.tscn::PackedScene::1937364708303240781::1715631175::0::1::::<><>::uid://7gqeb56h28uk::::res://player/wizard.tscn<>uid://heuprb67q5gf::::res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png
+test_ui.tscn::PackedScene::1937364708303240781::1715683358::0::1::::<><>::uid://7gqeb56h28uk::::res://player/wizard.tscn<>uid://heuprb67q5gf::::res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png

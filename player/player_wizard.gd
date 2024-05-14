@@ -147,7 +147,7 @@ func attack() -> void:
 			var skill1 = ritu_scene.instantiate()
 			add_child(skill1)
 			is_skill1 = true
-			skill1_cooldown = 0.76
+			skill1_cooldown = 3.84
 	elif Input.is_action_just_pressed("attack_2") == true || Input.is_action_just_pressed("attack_3") == true:
 	
 		atk = 2		
