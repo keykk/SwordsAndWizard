@@ -33,6 +33,7 @@ var skill2_cooldown: float = 0.0
 var atk: int = 0;
 var damage_digit_prefab: PackedScene
 var prefab: Array[PackedScene]
+
 func _process(delta: float) -> void:
 	GameManager.player_position = position
 	GameManager.player_health = health
@@ -58,6 +59,7 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	# Velocidade
+
 	var target_velocity = input_vector * speed * 100
 	
 	if is_attacking:
@@ -73,6 +75,7 @@ func _ready():
 	prefab.append(preload("res://misc/skull.tscn"))
 	prefab.append(preload("res://misc/explosao.tscn")) 
 	pikachu_skill = preload("res://misc/skill_choque.tscn")
+	
 
 func update_attack_cooldown(delta: float) -> void:
 	if is_attacking:
@@ -95,13 +98,12 @@ func update_attack_cooldown(delta: float) -> void:
 		
 		if skill2_cooldown <= 0:
 			is_skill2 = false
-			
-	
 	
 func read_input() -> void:
-	# Vector
+	
 	input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
+				
 	# Apagar deadzone do input vector
 	var deadzone = 0.15
 	if (abs(input_vector.x) < deadzone):

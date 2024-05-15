@@ -23,3 +23,7 @@ res://game_manager.gd
 res://jogo.gd
 res://enemies/enemy.gd
 res://player/warrior_blue.tscn
+res://player/player.gd
+res://player/touch_blue.tscn
+res://player/pawn_red.tscn
+res://player/player_wizard.gd

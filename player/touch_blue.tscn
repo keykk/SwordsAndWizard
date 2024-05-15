@@ -12,3 +12,11 @@ health = 200
 max_health = 200
 death_prefab = null
 ritu_scene = null
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+
+[node name="SwordArea" parent="." index="3"]
+visible = true
+position = Vector2(10, 1)
+scale = Vector2(3.48, 1.16)

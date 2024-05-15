@@ -12,7 +12,7 @@ explosion = ExtResource("3_4i010")
 max_health = 150
 health = 150
 death_prefab = ExtResource("4_qb0fx")
-sword_damage = 20
+sword_damage = 25
 
 [node name="SwordArea" parent="." index="3"]
 visible = true

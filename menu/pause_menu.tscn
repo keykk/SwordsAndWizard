@@ -42,5 +42,12 @@ layout_mode = 2
 theme = ExtResource("1_q8ux2")
 text = "MENU PRINCIPAL"
 
+[node name="TextEdit" type="TextEdit" parent="menu_holder"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+placeholder_text = "CONFIGURAR TECLA"
+editable = false
+
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
 [connection signal="pressed" from="menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]
+[connection signal="gui_input" from="menu_holder/TextEdit" to="." method="_on_text_edit_gui_input"]

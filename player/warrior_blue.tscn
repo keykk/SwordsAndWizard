@@ -6,9 +6,17 @@
 [node name="WarriorBlue" groups=["player"] instance=ExtResource("1_te258")]
 script = ExtResource("2_ypfv2")
 speed = 3.0
-ataque_1 = 40
-ataque_2 = 60
+ataque_1 = 60
+ataque_2 = 40
 health = 200
 max_health = 200
 death_prefab = null
 ritu_scene = null
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+
+[node name="SwordArea" parent="." index="3"]
+visible = true
+position = Vector2(-9, 5)
+scale = Vector2(3.0999, 1.19355)

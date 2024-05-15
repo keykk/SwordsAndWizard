@@ -69,7 +69,6 @@ func _ready():
 	prefab.append(preload("res://misc/meat.tscn"))
 	prefab.append(preload("res://misc/skull.tscn"))
 	prefab.append(preload("res://misc/explosao.tscn")) 
-
 func update_attack_cooldown(delta: float) -> void:
 	if is_attacking:
 		attack_cooldown -= delta # 0.6 - 0.016    0.584
@@ -171,9 +170,9 @@ func deal_damage_to_enemies() -> void:
 			else:
 				attack_direction = Vector2.RIGHT
 			var dot_product = direction_to_enemy.dot(attack_direction)
-			if dot_product >= 0.5 and atk == 1:
+			if dot_product >= 0.3 and atk == 1:
 				enemy.damage(ataque_1)
-			elif dot_product < 0.5 and atk == 2:
+			elif dot_product < 0.3 and atk == 2:
 				enemy.damage(ataque_2)
 				
 			pass
