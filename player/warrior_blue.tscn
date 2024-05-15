@@ -5,9 +5,9 @@
 
 [node name="WarriorBlue" groups=["player"] instance=ExtResource("1_te258")]
 script = ExtResource("2_ypfv2")
-speed = 3.0
-ataque_1 = 60
-ataque_2 = 40
+speed = 5.0
+ataque_1 = 70
+ataque_2 = 90
 health = 200
 max_health = 200
 death_prefab = null
