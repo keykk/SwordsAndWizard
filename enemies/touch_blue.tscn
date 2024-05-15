@@ -12,6 +12,12 @@ explosion = ExtResource("3_2a04y")
 max_health = 150
 health = 150
 death_prefab = ExtResource("3_u7u0g")
+sword_damage = 20
+
+[node name="SwordArea" parent="." index="3"]
+visible = true
+position = Vector2(5, 12)
+scale = Vector2(1.57849, 1.5881)
 
 [node name="Follow_player" type="Node" parent="." index="4"]
 script = ExtResource("3_we1l6")

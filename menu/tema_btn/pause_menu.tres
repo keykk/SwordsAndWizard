@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://30cmnji4aos4"]
+
+[sub_resource type="SystemFont" id="SystemFont_srsgp"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[resource]
+Button/colors/font_focus_color = Color(1, 1, 0, 1)
+Button/colors/font_hover_color = Color(1, 1, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0.541176, 0, 1)
+Button/fonts/font = SubResource("SystemFont_srsgp")

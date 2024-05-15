@@ -1,0 +1,193 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0c0352vpbpbp"]
+
+[ext_resource type="Theme" uid="uid://30cmnji4aos4" path="res://menu/tema_btn/pause_menu.tres" id="1_8japn"]
+[ext_resource type="PackedScene" uid="uid://berlw470k4fl4" path="res://characters/Wizard.tscn" id="1_d7o4x"]
+[ext_resource type="Script" path="res://menu/selecionar_personagem.gd" id="1_pvcap"]
+[ext_resource type="Texture2D" uid="uid://xf4ilbv4lnq2" path="res://menu/img/_4cbc978b-4f1d-486f-a51b-7e1de1f2d480.jpeg" id="2_wtj2o"]
+[ext_resource type="Theme" uid="uid://uqox7qj6aaty" path="res://menu/tema_label/selecionar_personagem.tres" id="4_bmtgb"]
+[ext_resource type="PackedScene" uid="uid://b7kjj8hi4fcqo" path="res://characters/WarriorBlue.tscn" id="4_fmqxe"]
+[ext_resource type="PackedScene" uid="uid://ctvloyl0xskon" path="res://characters/TouchBlue.tscn" id="5_5dqfy"]
+[ext_resource type="PackedScene" uid="uid://dv8fahnrx18mc" path="res://characters/PawnRed.tscn" id="6_161dd"]
+
+[node name="selecionar_personagem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvcap")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wtj2o")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -157.0
+offset_right = 136.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.929412)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="btn_inicio" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_8japn")
+text = "MENU PRINCIPAL"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="wizard_btn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_8japn")
+flat = true
+
+[node name="Wizard" parent="MarginContainer/VBoxContainer/HBoxContainer/wizard_btn" instance=ExtResource("1_d7o4x")]
+position = Vector2(57, 33)
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/wizard_btn"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_bmtgb")
+text = "WIZARD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="warrior_btn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_8japn")
+flat = true
+
+[node name="WarriorBlue" parent="MarginContainer/VBoxContainer/HBoxContainer/warrior_btn" instance=ExtResource("4_fmqxe")]
+position = Vector2(51, 68)
+script = null
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/warrior_btn"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_bmtgb")
+text = "WARRIOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="touch_btn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_8japn")
+flat = true
+
+[node name="TouchBlue" parent="MarginContainer/VBoxContainer/HBoxContainer3/touch_btn" instance=ExtResource("5_5dqfy")]
+position = Vector2(47, 74)
+script = null
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3/touch_btn"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_bmtgb")
+text = "TOUCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="paw_btn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_8japn")
+flat = true
+
+[node name="PawnRed" parent="MarginContainer/VBoxContainer/HBoxContainer3/paw_btn" instance=ExtResource("6_161dd")]
+position = Vector2(47, 66)
+script = null
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3/paw_btn"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_bmtgb")
+text = "PAW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="btn_start" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_8japn")
+text = "INICIAR"
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/btn_inicio" to="." method="_on_btn_inicio_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/wizard_btn" to="." method="_on_wizard_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/warrior_btn" to="." method="_on_warrior_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/touch_btn" to="." method="_on_touch_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/paw_btn" to="." method="_on_paw_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer2/btn_start" to="." method="_on_btn_start_pressed"]

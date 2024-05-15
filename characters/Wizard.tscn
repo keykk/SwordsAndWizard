@@ -239,8 +239,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vogk"]
-radius = 25.0
-height = 52.0
+radius = 7.0
+height = 34.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e5rh2"]
 radius = 139.442
@@ -262,8 +262,8 @@ frame = 5
 frame_progress = 0.94341
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -26)
+position = Vector2(-10, 41)
+rotation = -1.54769
 shape = SubResource("CapsuleShape2D_2vogk")
 
 [node name="SwordArea" type="Area2D" parent="."]
@@ -307,7 +307,7 @@ offset_right = 23.0
 offset_bottom = -43.0
 theme_override_styles/background = SubResource("StyleBoxFlat_wf8kr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2rshw")
-value = 80.0
+value = 100.0
 rounded = true
 show_percentage = false
 

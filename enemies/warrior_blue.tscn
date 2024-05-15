@@ -14,6 +14,11 @@ health = 150
 death_prefab = ExtResource("4_qb0fx")
 sword_damage = 20
 
+[node name="SwordArea" parent="." index="3"]
+visible = true
+position = Vector2(-4, 17)
+scale = Vector2(1.33937, 1.35999)
+
 [node name="Node" type="Node" parent="." index="4"]
 script = ExtResource("2_cprsp")
 

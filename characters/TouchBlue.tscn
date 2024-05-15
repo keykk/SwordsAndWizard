@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c70w38jlxek4r" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="2_ghnp1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vogk"]
-radius = 25.0
-height = 52.0
+radius = 4.98629
+height = 43.9961
 
 [sub_resource type="Animation" id="Animation_6c1m3"]
 length = 0.001
@@ -180,8 +180,8 @@ hframes = 7
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -26)
+position = Vector2(1, -5)
+rotation = -1.55753
 shape = SubResource("CapsuleShape2D_2vogk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -191,6 +191,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="SwordArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
 position = Vector2(-3, -30)

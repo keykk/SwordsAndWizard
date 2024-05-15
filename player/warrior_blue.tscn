@@ -1,5 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://usqjhitqqyo7"]
+[gd_scene load_steps=3 format=3 uid="uid://usqjhitqqyo7"]
 
 [ext_resource type="PackedScene" uid="uid://b7kjj8hi4fcqo" path="res://characters/WarriorBlue.tscn" id="1_te258"]
+[ext_resource type="Script" path="res://player/player.gd" id="2_ypfv2"]
 
 [node name="WarriorBlue" groups=["player"] instance=ExtResource("1_te258")]
+script = ExtResource("2_ypfv2")
+speed = 3.0
+ataque_1 = 40
+ataque_2 = 60
+health = 200
+max_health = 200
+death_prefab = null
+ritu_scene = null
