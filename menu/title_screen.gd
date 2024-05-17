@@ -14,6 +14,7 @@ func _on_start_btn_pressed():
 
 
 func _on_credits_btn_pressed():
+	OS.shell_open("https://github.com/keykk/SwordsAndWizard.git")
 	pass # Replace with function body.
 
 
