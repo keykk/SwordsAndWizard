@@ -1,11 +1,10 @@
 extends Control
-@onready var wizard = $MarginContainer/VBoxContainer/HBoxContainer/wizard_btn/Wizard
-@onready var warrior_blue = $MarginContainer/VBoxContainer/HBoxContainer/warrior_btn/WarriorBlue
-@onready var touch_blue = $MarginContainer/VBoxContainer/HBoxContainer3/touch_btn/TouchBlue
-@onready var pawn_red = $MarginContainer/VBoxContainer/HBoxContainer3/paw_btn/PawnRed
-@onready var btn_start = $MarginContainer/VBoxContainer/VBoxContainer2/btn_start
-
-@onready var btn_inicio = $MarginContainer/VBoxContainer/VBoxContainer/btn_inicio
+@onready var wizard = %Wizard
+@onready var warrior_blue = %WarriorBlue
+@onready var touch_blue = %TouchBlue
+@onready var pawn_red = %PawnRed
+@onready var btn_start = %btn_start
+@onready var btn_inicio = %btn_inicio
 
 var wizard_cd: float = 0.0
 var is_wizard = false

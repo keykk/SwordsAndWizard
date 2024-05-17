@@ -59,6 +59,7 @@ alignment = 1
 layout_mode = 2
 
 [node name="btn_inicio" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_8japn")
 text = "MENU PRINCIPAL"
@@ -77,6 +78,7 @@ theme = ExtResource("1_8japn")
 flat = true
 
 [node name="Wizard" parent="MarginContainer/VBoxContainer/HBoxContainer/wizard_btn" instance=ExtResource("1_d7o4x")]
+unique_name_in_owner = true
 position = Vector2(57, 33)
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/wizard_btn"]
@@ -102,6 +104,7 @@ theme = ExtResource("1_8japn")
 flat = true
 
 [node name="WarriorBlue" parent="MarginContainer/VBoxContainer/HBoxContainer/warrior_btn" instance=ExtResource("4_fmqxe")]
+unique_name_in_owner = true
 position = Vector2(51, 68)
 script = null
 
@@ -133,6 +136,7 @@ theme = ExtResource("1_8japn")
 flat = true
 
 [node name="TouchBlue" parent="MarginContainer/VBoxContainer/HBoxContainer3/touch_btn" instance=ExtResource("5_5dqfy")]
+unique_name_in_owner = true
 position = Vector2(47, 74)
 script = null
 
@@ -159,6 +163,7 @@ theme = ExtResource("1_8japn")
 flat = true
 
 [node name="PawnRed" parent="MarginContainer/VBoxContainer/HBoxContainer3/paw_btn" instance=ExtResource("6_161dd")]
+unique_name_in_owner = true
 position = Vector2(47, 66)
 script = null
 
@@ -180,6 +185,7 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="btn_start" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_8japn")
 text = "INICIAR"
