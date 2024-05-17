@@ -17,7 +17,7 @@ sword_damage = 20
 [node name="SwordArea" parent="." index="3"]
 visible = true
 position = Vector2(-3, 9)
-scale = Vector2(1.53282, 1.42105)
+scale = Vector2(1.61282, 1.46105)
 
 [node name="FollowPlayer" type="Node" parent="." index="4"]
 script = ExtResource("3_sbdvo")

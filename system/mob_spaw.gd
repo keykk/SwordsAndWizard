@@ -18,6 +18,17 @@ func _process(delta: float):
 	
 	var interval = 60.0 / mobs_per_minute
 	cooldown = interval
+
+	#checar terreno valido
+	var point = get_point()
+	var world_state = get_world_2d().direct_space_state
+	
+	var parameters = PhysicsPointQueryParameters2D.new()
+	parameters.position = point
+	#parameters.collision_mask = 0b1001
+	var result: Array = world_state.intersect_point(parameters, 1)
+	if not result.is_empty(): return
+	
 	
 	var index = randf_range(0, creatures.size())
 	var creature_scene = creatures[index]

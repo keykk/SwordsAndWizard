@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7mknu8skrtbl"]
+
+[ext_resource type="Texture2D" uid="uid://xf4ilbv4lnq2" path="res://menu/img/_4cbc978b-4f1d-486f-a51b-7e1de1f2d480.jpeg" id="1_6fh83"]
+[ext_resource type="Script" path="res://menu/config_screen.gd" id="1_i1be1"]
+[ext_resource type="Theme" uid="uid://30cmnji4aos4" path="res://menu/tema_btn/pause_menu.tres" id="3_d3wfx"]
+
+[sub_resource type="SystemFont" id="SystemFont_eginy"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="Theme" id="Theme_sxami"]
+Label/colors/font_outline_color = Color(0.968587, 5.67943e-06, 7.70092e-07, 1)
+Label/constants/outline_size = 33
+Label/fonts/font = SubResource("SystemFont_eginy")
+
+[node name="configScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_i1be1")
+
+[node name="bg" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6fh83")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BoxBegin" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="btn_begin" type="Button" parent="MarginContainer/BoxBegin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "VOLTAR (ESC)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BoxControls" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/BoxControls"]
+layout_mode = 2
+theme = SubResource("Theme_sxami")
+text = "PRESSIONE O BOTÃO PARA EDITAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_esquerda" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "PARA ESQUERDA (⬅, A)"
+
+[node name="btn_direita" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "PARA DIREITA (⮕, D)"
+
+[node name="btn_cima" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "PARA CIMA (⬆, W)"
+
+[node name="btn_baixo" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "PARA BAIXO (⬇, S)"
+
+[node name="btn_atk" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "ATAQUE (🖱️- CLICK ESQUERDO)"
+
+[node name="btn_atk2" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "ATAQUE 2 (🖱️ - CLICK DIREITO)"
+
+[node name="btn_default" type="Button" parent="MarginContainer/HBoxContainer/BoxControls"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "CONFIGURAÇÃO PADRÃO"
+
+[node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="BoxControl" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/BoxControl"]
+layout_mode = 2
+theme = SubResource("Theme_sxami")
+text = "PRECIONE (ESC) PARA SALVAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_tecla" type="Button" parent="MarginContainer/HBoxContainer/BoxControl"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_d3wfx")
+text = "PRECIONE A TECLA DESEJADA"
+
+[connection signal="pressed" from="MarginContainer/BoxBegin/btn_begin" to="." method="_on_btn_begin_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_esquerda" to="." method="_on_btn_esquerda_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_direita" to="." method="_on_btn_direita_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_cima" to="." method="_on_btn_cima_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_baixo" to="." method="_on_btn_baixo_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_atk" to="." method="_on_btn_atk_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_atk2" to="." method="_on_btn_atk_2_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BoxControls/btn_default" to="." method="_on_btn_default_pressed"]

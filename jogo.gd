@@ -1,39 +1,71 @@
 extends Node2D
-
-var default_input_map = {
-	"move_left": [88]
-}
-var input_map = {}
 		
 func _ready():
-	if has_save_file():
-		input_map = load_input_map()
-	else:
-		input_map = default_input_map
 	var character = GameManager.Player.instantiate()
+	var camera: Camera2D
+	var mob_spaw
+	var TransformeCamera: RemoteTransform2D
+	var Transf_mob_spaw: RemoteTransform2D
+	
 	character.position = Vector2(460, 242)
-	#character.position.y = 4
+	# verifica se existe e retorna
+	mob_spaw = find_node_of_type(get_tree().get_root(), "Node2D", "MobSpaw") 
+	# se não existe, cria
+	if !mob_spaw:
+		mob_spaw = load("res://system/mob_spaw.tscn")
+		mob_spaw = mob_spaw.instantiate()
+		add_child(mob_spaw)
+		pass
+	#verifica se ja existe camera e retorna a mesma
+	camera = find_node_of_type(get_tree().get_root(), "Camera2D", "Camera2D")
+	
+	# se não existe camera , cria uma
+	if !camera:
+		camera = Camera2D.new()
+		add_child(camera)
+		pass
+	
+	#cria e adiciona no player RemoteTransform2D para a camera
+	TransformeCamera = RemoteTransform2D.new()
+	Transf_mob_spaw = RemoteTransform2D.new()
+	character.add_child(TransformeCamera)
+	character.add_child(Transf_mob_spaw)
+	
+	TransformeCamera.remote_path = camera.get_path()
+	Transf_mob_spaw.remote_path = mob_spaw.get_path()
+	
+	##Config da camera
+	TransformeCamera.update_position = true
+	TransformeCamera.update_rotation = false
+	TransformeCamera.update_scale = false
+	TransformeCamera.use_global_coordinates = true
+	
+	##Config mob spaw
+	Transf_mob_spaw.update_position = true
+	Transf_mob_spaw.update_rotation = false
+	Transf_mob_spaw.update_scale = false
+	Transf_mob_spaw.use_global_coordinates = true
+	
+	#character.add_child(TransformeCamera)	
 	add_child(character)
 	
-func _input(event):
-	if event is InputEventKey:
-		var key_event = event as InputEventKey
-		# Verifique se a tecla pressionada está mapeada para a ação de pulo
-		if "move_left" in input_map and key_event.keycode in input_map["move_left"] and key_event.pressed:
-			# Lógica para pular aqui
-			print("Pular!")
-	
-# Função para carregar as configurações de entrada salvas
-func load_input_map():
-	# Lógica para carregar as configurações de um arquivo ou de outra fonte de dados
-	# Retorna as configurações carregadas
-	return self
+#func check_for_camera2d(node):
+	#for i in range(node.get_child_count()):
+		#var child = node.get_child(i)
+		#if child is Camera2D:
+			#return true
+		#elif child.get_child_count() > 0:
+			#var result = check_for_camera2d(child)
+			#if result:
+				#return true
+	#return false
 
-# Função para verificar se há um arquivo de configuração salvo
-func has_save_file():
-	# Lógica para verificar se o arquivo de configuração está presente
-	return false  # Exemplo simplificado, você deve implementar a lógica real aqui
-
-# Lógica para salvar as configurações de entrada
-func save_input_map():
-	pass
+func find_node_of_type(node, type_name, node_name):
+	for child in node.get_children():
+		if is_instance_valid(child) and child.get_class() == type_name and child.get_name() == node_name:
+			return child
+		elif child.get_child_count() > 0:
+			var result = find_node_of_type(child, type_name, node_name)
+			if result:
+				return result
+	return null

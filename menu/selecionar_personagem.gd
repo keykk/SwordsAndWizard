@@ -5,6 +5,8 @@ extends Control
 @onready var pawn_red = $MarginContainer/VBoxContainer/HBoxContainer3/paw_btn/PawnRed
 @onready var btn_start = $MarginContainer/VBoxContainer/VBoxContainer2/btn_start
 
+@onready var btn_inicio = $MarginContainer/VBoxContainer/VBoxContainer/btn_inicio
+
 var wizard_cd: float = 0.0
 var is_wizard = false
 var wizard_sprite: AnimatedSprite2D
@@ -22,6 +24,7 @@ var is_paw = false
 var paw_sprite: AnimationPlayer
 
 func _ready():
+	btn_inicio.grab_focus()
 	wizard.get_node("HealthProgressBar").visible = false
 	warrior_blue.get_node("HealthProgressBar").visible = false
 	touch_blue.get_node("HealthProgressBar").visible = false
