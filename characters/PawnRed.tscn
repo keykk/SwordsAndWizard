@@ -1,17 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv8fahnrx18mc"]
+[gd_scene load_steps=25 format=3 uid="uid://dv8fahnrx18mc"]
 
 [ext_resource type="Texture2D" uid="uid://byib5asvqguhy" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_2up4c"]
 [ext_resource type="Script" path="res://characters/scripts/player.gd" id="1_42oek"]
 [ext_resource type="PackedScene" uid="uid://1ymeouh2a26r" path="res://enemies/sounds/voice_box.tscn" id="3_5fy0w"]
 [ext_resource type="AudioStream" uid="uid://ji2dkyrt3x70" path="res://addons/Sounds/freesound/monsters/444445__voices_of_marz__demon-growl-for-halloween-spooky-creepy-scary-monster-ghoul-ghost-sounds.mp3" id="4_kixsj"]
-[ext_resource type="AudioStream" uid="uid://h74vogpovdsd" path="res://addons/Sounds/freesound/monsters/267240__zerokingfull__monster-roar.mp3" id="4_v7wgj"]
 [ext_resource type="AudioStream" uid="uid://bdgk6s4bhplof" path="res://addons/Sounds/freesound/monsters/669913__snowfightstudios__creature-gibberish-languagedialogue-monsteralien.mp3" id="5_jmgn4"]
 [ext_resource type="AudioStream" uid="uid://0o3wpiuujs0o" path="res://addons/Sounds/freesound/monsters/353960__13nharri__monster_growl.mp3" id="5_uplag"]
 [ext_resource type="AudioStream" uid="uid://bacsfi874c2bv" path="res://addons/Sounds/freesound/monsters/362026__whysohard__growl1_short.mp3" id="6_r5dbp"]
 [ext_resource type="AudioStream" uid="uid://bst275rfrtvbx" path="res://addons/Sounds/freesound/monsters/472754__abacagi__monsterundead.mp3" id="8_iuivt"]
-[ext_resource type="AudioStream" uid="uid://c5lycax4kbf34" path="res://addons/Sounds/freesound/monsters/505124__mitchanary__monster-roar_5.mp3" id="9_kt3fp"]
 [ext_resource type="AudioStream" uid="uid://bb1rt2bpe3p0r" path="res://addons/Sounds/freesound/monsters/557611__damnsatinist__zombie-groans.mp3" id="10_a126i"]
-[ext_resource type="AudioStream" uid="uid://0lqa7ta0sgcs" path="res://addons/Sounds/freesound/monsters/580104__ritorex24__blob-monster-type-roar.mp3" id="11_7y5vt"]
 [ext_resource type="AudioStream" uid="uid://dd8u0r86s6cpa" path="res://addons/Sounds/freesound/monsters/643766__snowfightstudios__monster-moan-groan-growl.mp3" id="12_1qokj"]
 [ext_resource type="AudioStream" uid="uid://bx4f8wl7mji7y" path="res://addons/Sounds/freesound/monsters/643791__snowfightstudios__zombie-noises-3.mp3" id="13_klr7b"]
 [ext_resource type="AudioStream" uid="uid://buy5unhxjj0as" path="res://addons/Sounds/freesound/monsters/643792__snowfightstudios__zombie-noises-2.mp3" id="14_0cphy"]
@@ -225,4 +222,4 @@ show_percentage = false
 position = Vector2(0, -65)
 
 [node name="VoiceBox" parent="." instance=ExtResource("3_5fy0w")]
-playbacks = Array[AudioStreamMP3]([ExtResource("4_v7wgj"), ExtResource("5_uplag"), ExtResource("6_r5dbp"), ExtResource("4_kixsj"), ExtResource("8_iuivt"), ExtResource("9_kt3fp"), ExtResource("10_a126i"), ExtResource("11_7y5vt"), ExtResource("12_1qokj"), ExtResource("13_klr7b"), ExtResource("14_0cphy"), ExtResource("5_jmgn4")])
+playbacks = Array[AudioStreamMP3]([ExtResource("5_uplag"), ExtResource("6_r5dbp"), ExtResource("4_kixsj"), ExtResource("8_iuivt"), ExtResource("10_a126i"), ExtResource("12_1qokj"), ExtResource("13_klr7b"), ExtResource("14_0cphy"), ExtResource("5_jmgn4")])

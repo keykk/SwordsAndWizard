@@ -1,11 +1,11 @@
-res://characters/PawnRed.tscn
+res://system/mob_spaw.tscn
 res://menu/tema_label/selecionar_personagem.tres
 res://menu/tema_btn/pause_menu.tres
-res://system/mob_spaw.tscn
 res://jogo.tscn
 res://ui/game_ui.tscn
 res://menu/config_screen.tscn
 res://characters/Wizard.tscn
+res://characters/PawnRed.tscn
 res://ui/game_over_ui.tscn
 res://enemies/sounds/voice_box.tscn
 res://enemies/warrior_blue.tscn
