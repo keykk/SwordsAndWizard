@@ -15,3 +15,8 @@ res://misc/skill_choque.tscn
 res://misc/damage_digit.tscn
 res://characters/TouchBlue.tscn
 res://characters/WarriorBlue.tscn
+res://player/wizard.tscn
+res://player/warrior_blue.tscn
+res://enemies/sounds/voice_box.gd
+res://player/touch_blue.tscn
+res://player/pawn_red.tscn

@@ -3,6 +3,8 @@ extends AudioStreamPlayer2D
 @onready var timer = %Timer
 
 func _on_timer_timeout() -> void:
+	if playbacks.size() == 0:
+		return
 	var playback = playbacks.pick_random()
 	stream = playback
 	play()

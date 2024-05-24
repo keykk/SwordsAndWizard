@@ -20,3 +20,6 @@ unique_name_in_owner = true
 
 [node name="DamageDigitMarker" parent="." index="7"]
 unique_name_in_owner = true
+
+[node name="VoiceBox" parent="." index="8"]
+playbacks = Array[AudioStreamMP3]([])
