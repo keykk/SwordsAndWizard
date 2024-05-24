@@ -1,10 +1,13 @@
 extends Node
+
+signal game_over
+
 var Player: PackedScene
 #var config_controls
 var player_position: Vector2
 var player_damage: int = 0
 var player_health: int
-
+var is_game_over: bool = false
 var enemy_pos
 
 var input_map = {
@@ -92,3 +95,16 @@ func find_node_of_type(node, type_name: String, node_name: String):
 			if result:
 				return result
 	return null
+
+func end_game():
+	if is_game_over: return
+	is_game_over = true
+	game_over.emit()
+	
+func reset():
+	player_position = Vector2.ZERO
+	is_game_over = false
+	
+	for connnection in game_over.get_connections():
+		game_over.disconnect(connnection.callable)
+	pass

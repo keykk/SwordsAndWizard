@@ -19,7 +19,7 @@ extends CharacterBody2D
 @onready var ataque_magico: Area2D = $SwordArea
 #@onready var ataque_magico_2: Area2D = $SwordArea2
 @onready var health_progress_bar: ProgressBar = $HealthProgressBar
-@onready var damage_digit_marker = $DamageDigitMarker
+@onready var damage_digit_marker = %DamageDigitMarker
 var input_vector: Vector2 = Vector2(0, 0)
 var is_running: bool = false
 var was_running: bool = false
@@ -206,6 +206,7 @@ func damage(amount: int) -> void:
 		die()
 		
 func die() -> void:
+	GameManager.end_game()
 	var index = randf_range(0, prefab.size())
 	var scene = prefab[index]
 	var presunto = scene.instantiate()

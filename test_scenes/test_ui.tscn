@@ -1,11 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://2uqd4ouma26d"]
+[gd_scene load_steps=6 format=3 uid="uid://2uqd4ouma26d"]
 
 [ext_resource type="PackedScene" uid="uid://cswivwibjta0y" path="res://ui/game_ui.tscn" id="1_77c3c"]
 [ext_resource type="PackedScene" uid="uid://7gqeb56h28uk" path="res://player/wizard.tscn" id="1_uhu2a"]
+[ext_resource type="PackedScene" uid="uid://coekkjp5y1vyj" path="res://enemies/warrior_blue.tscn" id="3_nxrme"]
+[ext_resource type="PackedScene" uid="uid://bh2nj4tfv48yi" path="res://enemies/touch_blue.tscn" id="4_xwwls"]
+[ext_resource type="PackedScene" uid="uid://dayf74nrvn4ep" path="res://enemies/pawn_red.tscn" id="5_38vuj"]
 
 [node name="TestUi" type="Node2D"]
 
 [node name="GameUI" parent="." instance=ExtResource("1_77c3c")]
 
-[node name="Wizard2" parent="." instance=ExtResource("1_uhu2a")]
-position = Vector2(508, 326)
+[node name="Wizard" parent="." instance=ExtResource("1_uhu2a")]
+position = Vector2(535, 287)
+
+[node name="WarriorBlue" parent="." instance=ExtResource("3_nxrme")]
+position = Vector2(163, 478)
+
+[node name="TouchBlue" parent="." instance=ExtResource("4_xwwls")]
+position = Vector2(544, 538)
+
+[node name="PawnRed" parent="." instance=ExtResource("5_38vuj")]
+position = Vector2(887, 463)

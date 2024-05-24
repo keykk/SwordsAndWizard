@@ -1,15 +1,19 @@
 extends Node2D
-		
+@export var game_over_ui_template: PackedScene		
 func _ready():
 	var character = GameManager.Player.instantiate()
 	var camera: Camera2D
 	var mob_spaw
 	var TransformeCamera: RemoteTransform2D
 	var Transf_mob_spaw: RemoteTransform2D
+	var DifficutySystem: Node
+	
+	GameManager.game_over.connect(trigger_game_over)
 	
 	character.position = Vector2(460, 242)
 	# verifica se existe e retorna
 	mob_spaw = find_node_of_type(get_tree().get_root(), "Node2D", "MobSpaw") 
+	DifficutySystem = find_node_of_type(get_tree().get_root(), "Node", "DifficutySystem") 
 	# se não existe, cria
 	if !mob_spaw:
 		mob_spaw = load("res://system/mob_spaw.tscn")
@@ -24,7 +28,7 @@ func _ready():
 		camera = Camera2D.new()
 		add_child(camera)
 		pass
-	
+	DifficutySystem.mob_spawner = mob_spaw
 	#cria e adiciona no player RemoteTransform2D para a camera
 	TransformeCamera = RemoteTransform2D.new()
 	Transf_mob_spaw = RemoteTransform2D.new()
@@ -69,3 +73,16 @@ func find_node_of_type(node, type_name, node_name):
 			if result:
 				return result
 	return null
+	
+func trigger_game_over():	
+	var game_ui = find_node_of_type(get_tree().get_root(), "Node", "Node")
+	if game_ui:
+		game_ui.queue_free()
+		game_ui = null
+	var game_over_ui: GameOverUI = game_over_ui_template.instantiate()
+	game_over_ui.monsters_defeated = 999
+	game_over_ui.time_survived = '01:02'
+	add_child(game_over_ui)
+	
+	
+	pass

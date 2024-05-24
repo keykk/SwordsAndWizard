@@ -25,3 +25,6 @@ speed = 0.8
 
 [node name="HealthProgressBar" parent="." index="5"]
 unique_name_in_owner = true
+
+[node name="DamageDigitMarker" parent="." index="6"]
+unique_name_in_owner = true

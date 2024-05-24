@@ -192,11 +192,11 @@ func exibe_controles_default():
 				else: txt_btn += ', ' + mouse.as_text()
 				pass
 			else:
-				var tecla = InputEventKey.new()
-				tecla.keycode = teclas
+				var tecla2 = InputEventKey.new()
+				tecla2.keycode = teclas
 				if txt_btn == "":
-					txt_btn += tecla.as_text()
-				else: txt_btn += ', ' + tecla.as_text()	
+					txt_btn += tecla2.as_text()
+				else: txt_btn += ', ' + tecla2.as_text()	
 				pass
 			temp_btn.text = key + ' [' + txt_btn + ']'	
 			pass

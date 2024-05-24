@@ -6,6 +6,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_eginy"]
 font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_sxami"]
 Label/colors/font_outline_color = Color(0.968587, 5.67943e-06, 7.70092e-07, 1)

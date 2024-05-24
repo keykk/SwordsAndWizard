@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://dc43d8npq0ct4"]
+[gd_scene load_steps=35 format=3 uid="uid://dc43d8npq0ct4"]
 
 [ext_resource type="Script" path="res://jogo.gd" id="1_1um1d"]
 [ext_resource type="Texture2D" uid="uid://cdvuuioul1w5k" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="1_vpgop"]
 [ext_resource type="Texture2D" uid="uid://nst6w6s838wf" path="res://addons/Tiny Swords/Deco/14.png" id="2_0k54j"]
 [ext_resource type="Texture2D" uid="uid://c7k520tqp40" path="res://addons/Tiny Swords/Deco/02.png" id="2_8c8vm"]
+[ext_resource type="PackedScene" uid="uid://nodjbpuwdl53" path="res://ui/game_over_ui.tscn" id="2_uthy1"]
 [ext_resource type="Texture2D" uid="uid://bslc0nl3v4exm" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="3_ci1ow"]
 [ext_resource type="Texture2D" uid="uid://dudjgtjtxtgsk" path="res://addons/Tiny Swords/Deco/09.png" id="4_xoxwn"]
 [ext_resource type="Texture2D" uid="uid://c2frmo07gbamc" path="res://addons/Tiny Swords/Deco/08.png" id="5_rt3sh"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cswivwibjta0y" path="res://ui/game_ui.tscn" id="15_cxdkv"]
 [ext_resource type="PackedScene" uid="uid://c7mknu8skrtbl" path="res://menu/config_screen.tscn" id="16_f4fmk"]
 [ext_resource type="PackedScene" uid="uid://b4f1ehvlvs0o5" path="res://menu/pause_menu.tscn" id="16_mf5yv"]
+[ext_resource type="Script" path="res://system/difficuty_system.gd" id="17_p062m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ucva"]
 texture = ExtResource("1_vpgop")
@@ -139,6 +141,7 @@ size = Vector2(14600.1, 3449.03)
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_1um1d")
+game_over_ui_template = ExtResource("2_uthy1")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -207,10 +210,15 @@ position = Vector2(-1797, 2060)
 [node name="Tree8" parent="Trees" instance=ExtResource("15_45iir")]
 position = Vector2(200, 310)
 
-[node name="pause_menu" parent="." instance=ExtResource("16_mf5yv")]
+[node name="Node" type="Node" parent="."]
+
+[node name="pause_menu" parent="Node" instance=ExtResource("16_mf5yv")]
 visible = false
 
-[node name="GameUI" parent="." instance=ExtResource("15_cxdkv")]
+[node name="GameUI" parent="Node" instance=ExtResource("15_cxdkv")]
 
-[node name="configScreen" parent="." instance=ExtResource("16_f4fmk")]
+[node name="configScreen" parent="Node" instance=ExtResource("16_f4fmk")]
 visible = false
+
+[node name="DifficutySystem" type="Node" parent="."]
+script = ExtResource("17_p062m")

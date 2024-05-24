@@ -37,6 +37,8 @@ func _process(delta):
 	health_progress_bar.max_value = enemy.max_health
 	health_progress_bar.value = enemy.health
 func _physics_process(delta: float) -> void:
+	if GameManager.is_game_over:
+		return
 	player_position = GameManager.player_position
 	var difference = player_position - enemy.position
 	input_vector =difference.normalized()

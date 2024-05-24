@@ -5,7 +5,7 @@ extends Node2D
 @export var health: int = max_health
 @export var death_prefab: PackedScene
 @export var sword_damage: int = 20
-@onready var damage_digit_marker = $DamageDigitMarker
+@onready var damage_digit_marker = %DamageDigitMarker
 
 var damage_digit_prefab: PackedScene
 var prefab: Array[PackedScene]
@@ -42,14 +42,21 @@ func damage(amount: int) -> void:
 func die() -> void:
 	GameManager.enemy_pos = self.position
 		
+	#var index = randf_range(0, prefab.size())
+	#var scene = prefab[index]
+	#var presunto = scene.instantiate()
+	#presunto.position = position
+	#get_parent().add_child(presunto)
+	call_deferred("DropDead")
+		
+	queue_free()
+func DropDead():
 	var index = randf_range(0, prefab.size())
 	var scene = prefab[index]
 	var presunto = scene.instantiate()
 	presunto.position = position
 	get_parent().add_child(presunto)
-		
-	queue_free()
-
+	
 func deal_damage_to_enemies() -> void:
 	var bodies = $SwordArea.get_overlapping_bodies()
 	for body in bodies:

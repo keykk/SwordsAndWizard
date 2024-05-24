@@ -1,8 +1,9 @@
+res://ui
 res://menu/tema_label
+res://
 res://menu
 res://menu/tema_btn
 res://misc
-res://ui
 res://addons/Wizard Pack
 res://addons/Tiny Swords/Effects/Explosion
 res://system
@@ -10,5 +11,4 @@ res://enemies
 res://addons/Tiny Swords/Resources/Resources
 res://player
 res://addons/Tiny Swords/Factions/Knights/Troops/Dead
-res://
 res://test_scenes

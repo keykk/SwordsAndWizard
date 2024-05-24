@@ -234,6 +234,7 @@ func damage(amount: int) -> void:
 		die()
 		
 func die() -> void:
+	GameManager.end_game()
 	var index = randf_range(0, prefab.size())
 	var scene = prefab[index]
 	var presunto = scene.instantiate()
