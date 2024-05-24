@@ -1,3 +1,5 @@
+Timer
+AudioStreamPlayer2D
 Node
 AnimationPlayer
 CenterContainer
@@ -11,4 +13,3 @@ AnimatedSprite2D
 CharacterBody2D
 VBoxContainer
 HBoxContainer
-Button

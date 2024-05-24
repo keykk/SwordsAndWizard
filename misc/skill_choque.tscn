@@ -502,6 +502,7 @@ texture = ExtResource("12_2ba5x")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_x5q2g")
+volume_db = -4.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_3quqi")
