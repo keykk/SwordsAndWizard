@@ -1,9 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://berlw470k4fl4"]
+[gd_scene load_steps=41 format=3 uid="uid://berlw470k4fl4"]
 
 [ext_resource type="Texture2D" uid="uid://cq05tmg3jrwy0" path="res://addons/Wizard Pack/Idle.png" id="1_6rypi"]
 [ext_resource type="Texture2D" uid="uid://c8kdhoko5my6m" path="res://addons/Wizard Pack/Attack1.png" id="1_kv1ub"]
 [ext_resource type="Texture2D" uid="uid://cay601p5ir5xi" path="res://addons/Wizard Pack/Run.png" id="2_gjgah"]
 [ext_resource type="Texture2D" uid="uid://db6klxgvyrel" path="res://addons/Wizard Pack/Attack2.png" id="2_kruy3"]
+[ext_resource type="PackedScene" uid="uid://1ymeouh2a26r" path="res://enemies/sounds/voice_box.tscn" id="5_ql0lm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hiil4"]
 atlas = ExtResource("1_kv1ub")
@@ -313,3 +314,5 @@ show_percentage = false
 
 [node name="DamageDigitMarker" type="Marker2D" parent="."]
 position = Vector2(-1, -75)
+
+[node name="VoiceBox" parent="." instance=ExtResource("5_ql0lm")]

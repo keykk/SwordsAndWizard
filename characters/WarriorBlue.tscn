@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7kjj8hi4fcqo"]
+[gd_scene load_steps=16 format=3 uid="uid://b7kjj8hi4fcqo"]
 
 [ext_resource type="Texture2D" uid="uid://b0xleccu0v2hu" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_hs24p"]
 [ext_resource type="Script" path="res://characters/scripts/player.gd" id="1_wo0i4"]
+[ext_resource type="PackedScene" uid="uid://1ymeouh2a26r" path="res://enemies/sounds/voice_box.tscn" id="3_17p0r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vogk"]
 radius = 6.00302
@@ -210,3 +211,5 @@ show_percentage = false
 
 [node name="DamageDigitMarker" type="Marker2D" parent="."]
 position = Vector2(0, -92)
+
+[node name="VoiceBox" parent="." instance=ExtResource("3_17p0r")]

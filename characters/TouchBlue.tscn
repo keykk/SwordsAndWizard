@@ -1,7 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://ctvloyl0xskon"]
+[gd_scene load_steps=28 format=3 uid="uid://ctvloyl0xskon"]
 
 [ext_resource type="Script" path="res://characters/scripts/player.gd" id="1_orpym"]
 [ext_resource type="Texture2D" uid="uid://c70w38jlxek4r" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="2_ghnp1"]
+[ext_resource type="PackedScene" uid="uid://1ymeouh2a26r" path="res://enemies/sounds/voice_box.tscn" id="3_odn5i"]
+[ext_resource type="AudioStream" uid="uid://h74vogpovdsd" path="res://addons/Sounds/freesound/monsters/267240__zerokingfull__monster-roar.mp3" id="4_e1587"]
+[ext_resource type="AudioStream" uid="uid://0o3wpiuujs0o" path="res://addons/Sounds/freesound/monsters/353960__13nharri__monster_growl.mp3" id="5_1l5n6"]
+[ext_resource type="AudioStream" uid="uid://bacsfi874c2bv" path="res://addons/Sounds/freesound/monsters/362026__whysohard__growl1_short.mp3" id="6_0f538"]
+[ext_resource type="AudioStream" uid="uid://ji2dkyrt3x70" path="res://addons/Sounds/freesound/monsters/444445__voices_of_marz__demon-growl-for-halloween-spooky-creepy-scary-monster-ghoul-ghost-sounds.mp3" id="7_6ck8m"]
+[ext_resource type="AudioStream" uid="uid://bst275rfrtvbx" path="res://addons/Sounds/freesound/monsters/472754__abacagi__monsterundead.mp3" id="8_lmwlk"]
+[ext_resource type="AudioStream" uid="uid://c5lycax4kbf34" path="res://addons/Sounds/freesound/monsters/505124__mitchanary__monster-roar_5.mp3" id="9_80y0k"]
+[ext_resource type="AudioStream" uid="uid://bb1rt2bpe3p0r" path="res://addons/Sounds/freesound/monsters/557611__damnsatinist__zombie-groans.mp3" id="10_3db01"]
+[ext_resource type="AudioStream" uid="uid://0lqa7ta0sgcs" path="res://addons/Sounds/freesound/monsters/580104__ritorex24__blob-monster-type-roar.mp3" id="11_r7j83"]
+[ext_resource type="AudioStream" uid="uid://dd8u0r86s6cpa" path="res://addons/Sounds/freesound/monsters/643766__snowfightstudios__monster-moan-groan-growl.mp3" id="12_op0k7"]
+[ext_resource type="AudioStream" uid="uid://bx4f8wl7mji7y" path="res://addons/Sounds/freesound/monsters/643791__snowfightstudios__zombie-noises-3.mp3" id="13_mtcrd"]
+[ext_resource type="AudioStream" uid="uid://buy5unhxjj0as" path="res://addons/Sounds/freesound/monsters/643792__snowfightstudios__zombie-noises-2.mp3" id="14_6gar2"]
+[ext_resource type="AudioStream" uid="uid://bdgk6s4bhplof" path="res://addons/Sounds/freesound/monsters/669913__snowfightstudios__creature-gibberish-languagedialogue-monsteralien.mp3" id="15_ntwug"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vogk"]
 radius = 4.98629
@@ -210,3 +223,6 @@ show_percentage = false
 
 [node name="DamageDigitMarker" type="Marker2D" parent="."]
 position = Vector2(1, -84)
+
+[node name="VoiceBox" parent="." instance=ExtResource("3_odn5i")]
+playbacks = Array[AudioStreamMP3]([ExtResource("4_e1587"), ExtResource("5_1l5n6"), ExtResource("6_0f538"), ExtResource("7_6ck8m"), ExtResource("8_lmwlk"), ExtResource("9_80y0k"), ExtResource("10_3db01"), ExtResource("11_r7j83"), ExtResource("12_op0k7"), ExtResource("13_mtcrd"), ExtResource("14_6gar2"), ExtResource("15_ntwug")])
