@@ -6,8 +6,8 @@
 [node name="TouchBlue" groups=["player"] instance=ExtResource("1_43ekh")]
 script = ExtResource("2_xgey4")
 speed = 3.0
-ataque_1 = 100
-ataque_2 = 110
+ataque_1 = 35
+ataque_2 = 39
 health = 200
 max_health = 200
 death_prefab = null

@@ -7,6 +7,9 @@ func _ready():
 	var TransformeCamera: RemoteTransform2D
 	var Transf_mob_spaw: RemoteTransform2D
 	var DifficutySystem: Node
+	GameManager.monsters_defeated_counter = 0
+	GameManager.time_elapsed = 0.0
+	GameManager.time_elapsed_string = "00:00"
 	
 	GameManager.game_over.connect(trigger_game_over)
 	
@@ -80,8 +83,6 @@ func trigger_game_over():
 		game_ui.queue_free()
 		game_ui = null
 	var game_over_ui: GameOverUI = game_over_ui_template.instantiate()
-	game_over_ui.monsters_defeated = 999
-	game_over_ui.time_survived = '01:02'
 	add_child(game_over_ui)
 	
 	

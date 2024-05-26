@@ -4,12 +4,22 @@ signal game_over
 
 var Player: PackedScene
 #var config_controls
+
+var base_exp = 100   # Base de experiência
+var exponent = 2     # Exponente que define a curva de dificuldade
+var current_level = 1
+var current_exp = 0
+var exp_needed = 100
+
 var player_position: Vector2
 var player_damage: int = 0
 var player_health: int
+var player_max_health: int
 var is_game_over: bool = false
 var enemy_pos
-
+var time_elapsed: float = 0.0
+var time_elapsed_string: String
+var monsters_defeated_counter: int = 0
 var input_map = {
 	"move_left": [KEY_LEFT, KEY_A],
 	"move_right": [KEY_RIGHT, KEY_D],
@@ -28,9 +38,20 @@ var default_input_map = {
 	"attack_2": [MOUSE_BUTTON_RIGHT]
 }
 
+var enemies_qtd: int = 0
+
 func _ready():
 	load_input_map()
 	#call_deferred("criar_config_controls")
+
+func _process(delta):
+	
+	time_elapsed += delta
+	#formatar timer
+	var time_elapsed_in_seconds: int = floori(time_elapsed)
+	var seconds: int = time_elapsed_in_seconds % 60
+	var minutes: int = time_elapsed_in_seconds / 60
+	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
 	
 func criar_config_controls():
 	#config_controls = preload("res://menu/config_screen.tscn")
@@ -96,14 +117,43 @@ func find_node_of_type(node, type_name: String, node_name: String):
 				return result
 	return null
 
+
+
+func experience_for_next_level(current_level):
+	return base_exp * pow(current_level, exponent)
+
+func add_experience(amount):
+	current_exp += amount
+	#print("Experiência atual: ", current_exp)
+	while current_exp >= exp_needed:
+		current_exp -= exp_needed
+		level_up()
+		
+func level_up():
+	current_level += 1
+	player_health = player_max_health
+	exp_needed = experience_for_next_level(current_level)
+	#print("Nível atual: ", current_level, " - Experiência necessária para o próximo nível: ", exp_needed)
+
 func end_game():
 	if is_game_over: return
 	is_game_over = true
 	game_over.emit()
 	
+	
 func reset():
 	player_position = Vector2.ZERO
 	is_game_over = false
+	monsters_defeated_counter = 0
+	time_elapsed = 0.0
+	time_elapsed_string = "00:00"
+	
+	#RESETAR EXP
+	base_exp = 100   # Base de experiência
+	exponent = 2     # Exponente que define a curva de dificuldade
+	current_level = 1
+	current_exp = 0
+	exp_needed = 100
 	
 	for connnection in game_over.get_connections():
 		game_over.disconnect(connnection.callable)

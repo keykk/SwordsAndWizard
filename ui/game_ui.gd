@@ -1,19 +1,19 @@
 extends CanvasLayer
 @onready var timer_label: Label = %TimerLabel
 @onready var main_menu = %MainMenu
+@onready var lbl_abates = %lbl_abates
+@onready var lbl_inimigos = %lbl_inimigos
 
-var time_elapsed: float = 0.0
+
 
 func _ready():
 	main_menu.visible = false
 
 func _process(delta: float):
-	time_elapsed += delta
-	#formatar timer
-	var time_elapsed_in_seconds: int = floori(time_elapsed)
-	var seconds: int = time_elapsed_in_seconds % 60
-	var minutes: int = time_elapsed_in_seconds / 60
-	timer_label.text = "%02d:%02d" % [minutes, seconds]
+	lbl_abates.text = '(' + str(GameManager.monsters_defeated_counter) + ') ABATES'
+	lbl_inimigos.text = '(' + str(GameManager.enemies_qtd) + ') INIMIGOS'
+	timer_label.text = GameManager.time_elapsed_string
+	pass
 
 
 func _on_button_pressed():

@@ -11,6 +11,8 @@ func _ready():
 func _process(delta: float):
 	if GameManager.is_game_over:
 		return
+	if GameManager.enemies_qtd >= 150:
+		return
 	# frequencia:monstro por minutos
 	# temporarizador
 	cooldown -= delta
@@ -36,6 +38,7 @@ func _process(delta: float):
 	var creature = creature_scene.instantiate()
 	creature.global_position = get_point()
 	get_parent().add_child(creature)
+	GameManager.enemies_qtd += 1
 	pass
 	
 func get_point() -> Vector2:

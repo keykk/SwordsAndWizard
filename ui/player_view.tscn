@@ -1,0 +1,222 @@
+[gd_scene load_steps=16 format=3 uid="uid://bdmxcmuyb4qe"]
+
+[ext_resource type="Texture2D" uid="uid://d4aukj3bpawm4" path="res://addons/ui/ui_big_pieces.png" id="1_5nwwo"]
+[ext_resource type="Script" path="res://ui/player_view.gd" id="1_247q0"]
+[ext_resource type="Theme" uid="uid://uqox7qj6aaty" path="res://menu/tema_label/selecionar_personagem.tres" id="2_uyi2b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6xpgm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wpvsq"]
+texture = ExtResource("1_5nwwo")
+texture_margin_left = 32.0
+texture_margin_top = 42.0
+texture_margin_right = 20.0
+texture_margin_bottom = 42.0
+region_rect = Rect2(16, 184, 32, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2mwfy"]
+texture = ExtResource("1_5nwwo")
+texture_margin_top = 20.0
+texture_margin_bottom = 22.0
+region_rect = Rect2(82, 184, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssqoo"]
+atlas = ExtResource("1_5nwwo")
+region = Rect2(284, 42, 22, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkqjk"]
+atlas = ExtResource("1_5nwwo")
+region = Rect2(408, 39, 6, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2l7e7"]
+texture = ExtResource("1_5nwwo")
+region_rect = Rect2(324, 40, 10, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pole5"]
+texture = ExtResource("1_5nwwo")
+texture_margin_right = 8.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(516, 182, 16, 20)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy1y1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltbev"]
+texture = ExtResource("1_5nwwo")
+region_rect = Rect2(428, 40, 8, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_366gd"]
+atlas = ExtResource("1_5nwwo")
+region = Rect2(284, 64, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1qmv"]
+atlas = ExtResource("1_5nwwo")
+region = Rect2(380, 38, 6, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ip2th"]
+texture = ExtResource("1_5nwwo")
+region_rect = Rect2(446, 40, 8, 14)
+
+[node name="PlayerView" type="CanvasLayer"]
+script = ExtResource("1_247q0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 72.0
+offset_bottom = 72.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6xpgm")
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 65.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="Panel" type="Panel" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(32, 65)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_wpvsq")
+
+[node name="Panel5" type="Panel" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(32, 65)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_2mwfy")
+
+[node name="lbl_nivel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HpBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 16)
+offset_left = 81.0
+offset_top = 30.0
+offset_right = 231.0
+offset_bottom = 48.0
+scale = Vector2(1, 1.019)
+value = 50.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_ssqoo")
+texture_progress = SubResource("AtlasTexture_gkqjk")
+
+[node name="LblHp" type="Label" parent="HpBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_uyi2b")
+text = "80 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 230.0
+offset_top = 30.0
+offset_right = 238.0
+offset_bottom = 48.0
+scale = Vector2(1, 1.019)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2l7e7")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 71.0
+offset_top = 28.0
+offset_right = 82.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pole5")
+
+[node name="Panel4" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -380.0
+offset_top = -26.0
+offset_right = 384.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uy1y1")
+
+[node name="GridContainer" type="GridContainer" parent="Panel4"]
+custom_minimum_size = Vector2(756, 16)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="Panel2" type="Panel" parent="Panel4/GridContainer"]
+custom_minimum_size = Vector2(4, 16)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ltbev")
+
+[node name="ExpBar" type="TextureProgressBar" parent="Panel4/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(756, 16)
+layout_mode = 2
+value = 80.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_366gd")
+texture_progress = SubResource("AtlasTexture_v1qmv")
+
+[node name="Panel" type="Panel" parent="Panel4/GridContainer"]
+custom_minimum_size = Vector2(4, 16)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ip2th")
+
+[node name="lbl_exp" type="Label" parent="Panel4"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_uyi2b")
+text = "10 / 8000"
+horizontal_alignment = 1
+vertical_alignment = 1

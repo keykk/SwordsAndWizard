@@ -17,6 +17,10 @@ func _ready():
 	prefab.append(preload("res://misc/explosao.tscn")) 
 
 func damage(amount: int) -> void:
+	if health <= 0:
+		return
+		
+	amount += (amount * ((float(GameManager.current_level) * randf_range(10.0, 120.0)) / 100.0) )	
 	health -= amount
 	#print("Dano ", amount,". Vida ",health)
 	
@@ -47,10 +51,15 @@ func die() -> void:
 	#var presunto = scene.instantiate()
 	#presunto.position = position
 	#get_parent().add_child(presunto)
+	
 	call_deferred("DropDead")
 		
 	queue_free()
 func DropDead():
+	GameManager.monsters_defeated_counter += 1
+	GameManager.enemies_qtd -= 1
+	GameManager.add_experience((100 - (GameManager.current_level * 10)))
+	
 	var index = randf_range(0, prefab.size())
 	var scene = prefab[index]
 	var presunto = scene.instantiate()

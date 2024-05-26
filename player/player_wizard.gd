@@ -36,9 +36,13 @@ var prefab: Array[PackedScene]
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
-	GameManager.player_health = health
-	#damage(GameManager.player_damage)
-	#GameManager.player_damage = 0
+	if GameManager.player_health <= health:
+		GameManager.player_health = health
+	else: 
+		GameManager.player_max_health += (GameManager.player_max_health * ((float(GameManager.current_level) * randf_range(10.0, 50.0)) / 100.0) )
+		max_health = GameManager.player_max_health
+		health = max_health
+		GameManager.player_health = max_health
 	
 	# Ler input
 	read_input()
@@ -69,6 +73,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _ready():
+	GameManager.player_max_health = max_health
 	animation_player.frame_changed.connect(deal_damage_to_enemies)
 	damage_digit_prefab = preload("res://misc/damage_digit.tscn")
 	prefab.append(preload("res://misc/meat.tscn"))
@@ -147,6 +152,7 @@ func attack() -> void:
 		atk = 1
 		if !is_skill1:
 			var skill1 = ritu_scene.instantiate()
+			#skill1.damage_amount += (skill1.damage_amount * ((float(GameManager.current_level) * randf_range(10.0, 120.0)) / 100.0) )
 			add_child(skill1)
 			is_skill1 = true
 			skill1_cooldown = 3.84
@@ -211,6 +217,7 @@ func deal_damage_to_enemies() -> void:
 func damage(amount: int) -> void:
 	if amount == 0:
 		return
+	amount += (amount * ((float(GameManager.current_level) * randf_range(10.0, 120.0)) / 100.0) )	
 	health -= amount
 	#print("Dano ", amount,". Vida ",health)
 	GameManager.player_health = health

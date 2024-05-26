@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jggd6mobya0w"]
+
+[ext_resource type="PackedScene" uid="uid://cr1tg6nvnbc6t" path="res://misc/dink_dama.tscn" id="1_ap5me"]
+
+[node name="skillDink" type="Node2D"]
+
+[node name="DinkDama" parent="." instance=ExtResource("1_ap5me")]

@@ -6,8 +6,8 @@
 [node name="PawnRed" groups=["player"] instance=ExtResource("1_1tv5b")]
 script = ExtResource("2_r5fj2")
 speed = 4.0
-ataque_1 = 80
-ataque_2 = 100
+ataque_1 = 25
+ataque_2 = 35
 health = 200
 max_health = 200
 death_prefab = null
