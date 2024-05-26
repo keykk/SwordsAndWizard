@@ -8,7 +8,7 @@ extends Control
 
 var wizard_cd: float = 0.0
 var is_wizard = false
-var wizard_sprite: AnimatedSprite2D
+var wizard_sprite: AnimationPlayer
 
 var warrior_cd: float = 0.0
 var is_warrior = false
@@ -29,7 +29,7 @@ func _ready():
 	touch_blue.get_node("HealthProgressBar").visible = false
 	pawn_red.get_node("HealthProgressBar").visible = false
 	btn_start.disabled = true
-	wizard_sprite = wizard.get_node("AnimatedSprite2D")
+	wizard_sprite = wizard.get_node("AnimationPlayer")
 	warrior_sprite = warrior_blue.get_node("AnimationPlayer")
 	touch_sprite = touch_blue.get_node("AnimationPlayer")
 	paw_sprite = pawn_red.get_node("AnimationPlayer")

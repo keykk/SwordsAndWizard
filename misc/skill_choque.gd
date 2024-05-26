@@ -1,5 +1,5 @@
 extends Node2D
-@export var damage_amount:float = 30.0
+@export var damage_amount:float = 20.0
 
 @onready var area2d: Area2D = $Area2D
 

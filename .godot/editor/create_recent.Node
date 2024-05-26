@@ -1,3 +1,8 @@
+Node
+AnimationPlayer
+CollisionShape2D
+Area2D
+Sprite2D
 Label
 GridContainer
 Panel
@@ -5,10 +10,5 @@ TextureProgressBar
 CanvasLayer
 AnimatedSprite2D
 Node2D
-Node
-CollisionShape2D
-Area2D
-AnimationPlayer
 Timer
 AudioStreamPlayer2D
-CenterContainer

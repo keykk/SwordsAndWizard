@@ -6,6 +6,11 @@ func _ready():
 	start_btn.grab_focus()
 	#var pai = get_tree().get_root()
 	#pai.move_child(GameManager.config_controls, 2)
+	GameManager.base_exp = 100   # Base de experiência
+	GameManager.exponent = 2     # Exponente que define a curva de dificuldade
+	GameManager.current_level = 1
+	GameManager.current_exp = 0
+	GameManager.exp_needed = 100
 	pass
 
 func _on_start_btn_pressed():

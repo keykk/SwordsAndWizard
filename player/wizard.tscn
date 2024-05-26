@@ -1,27 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://7gqeb56h28uk"]
+[gd_scene load_steps=5 format=3 uid="uid://7gqeb56h28uk"]
 
 [ext_resource type="PackedScene" uid="uid://berlw470k4fl4" path="res://characters/Wizard.tscn" id="1_ue4g3"]
-[ext_resource type="Script" path="res://player/player_wizard.gd" id="2_dmcfa"]
+[ext_resource type="Script" path="res://player/player.gd" id="2_m2iso"]
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="2_pknm3"]
-[ext_resource type="PackedScene" uid="uid://c8u3tb2dmfmii" path="res://misc/ritu.tscn" id="4_0yyua"]
 [ext_resource type="PackedScene" uid="uid://bp07b8i55d58b" path="res://misc/skull.tscn" id="4_5lbx5"]
 
 [node name="Wizard" groups=["player"] instance=ExtResource("1_ue4g3")]
-script = ExtResource("2_dmcfa")
-ataque_1 = 15
-ataque_2 = 20
-death_prefab = ExtResource("4_5lbx5")
-ritu_scene = ExtResource("4_0yyua")
+script = ExtResource("2_m2iso")
+speed = 3.0
+ataque_1 = 10
+ataque_2 = 15
+health = 200
+max_health = 200
+death_prefab = null
+ritu_scene = null
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 script = ExtResource("2_pknm3")
 death_prefab = ExtResource("4_5lbx5")
 
-[node name="HealthProgressBar" parent="." index="6"]
+[node name="HealthProgressBar" parent="." index="7"]
 unique_name_in_owner = true
 
-[node name="DamageDigitMarker" parent="." index="7"]
+[node name="DamageDigitMarker" parent="." index="8"]
 unique_name_in_owner = true
 
-[node name="VoiceBox" parent="." index="8"]
+[node name="VoiceBox" parent="." index="9"]
 playbacks = Array[AudioStreamMP3]([])

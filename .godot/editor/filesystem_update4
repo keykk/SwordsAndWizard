@@ -31,3 +31,12 @@ res://system/mob_spaw.gd
 res://misc/ritu.gd
 res://misc/skill_choque.gd
 res://player/warrior_blue.tscn
+res://misc/fire.tscn
+res://characters/WarriorBlue.tscn
+res://characters/Skill_Ritual.gd
+res://characters/Skill_Choque_Pikachu.gd
+res://menu/selecionar_personagem.tscn
+res://menu/selecionar_personagem.gd
+res://characters/TouchBlue.tscn
+res://menu/title_screen.tscn
+res://menu/title_screen.gd
