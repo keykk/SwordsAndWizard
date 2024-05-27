@@ -187,7 +187,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtmsg"]
-size = Vector2(62, 21)
+size = Vector2(53, 30.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfh1p"]
 bg_color = Color(0, 0, 0, 1)
@@ -219,7 +219,7 @@ autoplay = "idle"
 [node name="SwordArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(31, -11)
+position = Vector2(26.5, -15.75)
 shape = SubResource("RectangleShape2D_gtmsg")
 
 [node name="HealthProgressBar" type="ProgressBar" parent="."]

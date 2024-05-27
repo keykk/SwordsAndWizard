@@ -161,8 +161,8 @@ _data = {
 "render": SubResource("Animation_xkgly")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e5rh2"]
-radius = 51.0098
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcn05"]
+size = Vector2(53, 44)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1s65"]
 bg_color = Color(0, 0, 0, 1)
@@ -192,11 +192,10 @@ libraries = {
 autoplay = "idle"
 
 [node name="SwordArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(4, -33)
-shape = SubResource("CircleShape2D_e5rh2")
+position = Vector2(30, -15)
+shape = SubResource("RectangleShape2D_bcn05")
 
 [node name="HealthProgressBar" type="ProgressBar" parent="."]
 offset_left = -19.0

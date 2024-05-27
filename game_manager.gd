@@ -147,6 +147,7 @@ func reset():
 	monsters_defeated_counter = 0
 	time_elapsed = 0.0
 	time_elapsed_string = "00:00"
+	enemies_qtd = 0
 	
 	#RESETAR EXP
 	base_exp = 100   # Base de experiência

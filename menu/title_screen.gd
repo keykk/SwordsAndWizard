@@ -11,6 +11,7 @@ func _ready():
 	GameManager.current_level = 1
 	GameManager.current_exp = 0
 	GameManager.exp_needed = 100
+	GameManager.enemies_qtd = 0;
 	pass
 
 func _on_start_btn_pressed():

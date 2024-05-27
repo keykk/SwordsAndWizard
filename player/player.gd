@@ -136,16 +136,20 @@ func attack() -> void:
 	if is_attacking:
 		return
 	#tocar animação
+	
 	var animation
 	if Input.is_action_just_pressed("attack"):
+		ataque_magico = GameManager.find_node_of_type(self, "Area2D", "SwordArea")
+		detectarCorpo()
 		animation_player.play("ataque")
 		atk = 1
 		animation = animation_player.get_animation("ataque")
-		ataque_magico = GameManager.find_node_of_type(self, "Area2D", "SwordArea")
+		
 	elif Input.is_action_just_pressed("attack_2") == true || Input.is_action_just_pressed("attack_3") == true:
 		ataque_magico = GameManager.find_node_of_type(self, "Area2D", "SwordArea2")
 		if not ataque_magico:
 			ataque_magico = GameManager.find_node_of_type(self, "Area2D", "SwordArea")
+		detectarCorpo()
 		atk = 2		
 		animation_player.play("ataque_2")
 		animation = animation_player.get_animation("ataque_2")
@@ -158,18 +162,19 @@ func attack() -> void:
 	is_attacking = true
 	
 	pass
-	
-func deal_damage_to_enemies() -> void:
-	# Acessar todos os inimigos
-	# Chamar a função "damage"
-	#	Com "sword_damage" como primeiro parametro
-	#sword_area.get_overlapping_areas() # AOE
+func detectarCorpo():
 	if sprite.flip_h:
 		if ataque_magico.scale.x > 0.0:
 			ataque_magico.scale.x *= -1
 	elif ataque_magico.scale.x < 0.0:
 		ataque_magico.scale.x *= -1
-	#print(str(ataque_magico.scale.x))	
+	print(str(ataque_magico.scale.x))	
+func deal_damage_to_enemies() -> void:
+	# Acessar todos os inimigos
+	# Chamar a função "damage"
+	#	Com "sword_damage" como primeiro parametro
+	#sword_area.get_overlapping_areas() # AOE
+		
 	var bodies
 	bodies = ataque_magico.get_overlapping_bodies()
 		

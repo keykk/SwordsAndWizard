@@ -455,10 +455,10 @@ radius = 7.0
 height = 34.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e5rh2"]
-radius = 139.442
+radius = 59.1523
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kksn0"]
-size = Vector2(153.188, 142.308)
+size = Vector2(22.4638, 86.5385)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf8kr"]
 bg_color = Color(0, 0, 0, 1)
@@ -488,23 +488,23 @@ rotation = -1.54769
 shape = SubResource("CapsuleShape2D_2vogk")
 
 [node name="SwordArea" type="Area2D" parent="."]
-visible = false
-position = Vector2(-3.99998, -34)
-scale = Vector2(0.780585, 0.781)
+position = Vector2(-9, 41)
+scale = Vector2(0.781, 0.781)
 linear_damp = 17.145
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
-visible = false
-position = Vector2(10, -11)
+position = Vector2(78.105, -92.1895)
 shape = SubResource("CircleShape2D_e5rh2")
 debug_color = Color(0.760578, 0.424332, 0.425787, 0.42)
 
 [node name="SwordArea2" type="Area2D" parent="."]
-position = Vector2(29, -14)
+visible = false
+position = Vector2(-10, 41)
 scale = Vector2(2.88, 0.52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea2"]
-position = Vector2(73.8194, 32.6923)
+visible = false
+position = Vector2(29.8611, -111.538)
 scale = Vector2(0.958333, 1)
 shape = SubResource("RectangleShape2D_kksn0")
 debug_color = Color(0.920178, 0.958805, 0.779275, 0.42)
